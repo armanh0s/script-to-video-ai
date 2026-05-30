@@ -1,5 +1,4 @@
 
-%%writefile app_v4.py
 import streamlit as st
 import os
 import json
