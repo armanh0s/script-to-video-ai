@@ -1,4 +1,13 @@
+import os
+import subprocess
+import sys
 
+# Agar moviepy ya gTTS nahi hai, toh code khud use install kar lega
+try:
+    from moviepy.editor import VideoFileClip
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "moviepy", "gTTS", "google-genai", "requests", "streamlit"])
+    
 import streamlit as st
 import os
 import json
